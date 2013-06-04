@@ -1,5 +1,5 @@
 /**
- * Description : Script for the application router to handle view flows.
+ * Description : Script for common page layout of html page.
  * Author : Rachna Khokhar
  * Date : 30-05-2013
  */

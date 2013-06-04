@@ -1,5 +1,5 @@
 /**
- * Description : Script for the index page view.
+ * Description : Script for the index page content view.
  * Author : Rachna Khokhar
  * Date : 30-05-2013
  */

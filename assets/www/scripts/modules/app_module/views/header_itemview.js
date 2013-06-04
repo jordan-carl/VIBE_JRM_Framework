@@ -1,5 +1,5 @@
 /**
- * Description : Script for the application router to handle view flows. Author :
+ * Description : Script for the header item view. Author :
  * Rachna Khokhar Date : 30-05-2013
  */
 

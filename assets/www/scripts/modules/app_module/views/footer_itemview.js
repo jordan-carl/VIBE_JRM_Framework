@@ -1,5 +1,5 @@
 /**
- * Description : Script for the application router to handle view flows.
+ * Description : Script for the footer item view.
  * Author : Rachna Khokhar
  * Date : 30-05-2013
  */

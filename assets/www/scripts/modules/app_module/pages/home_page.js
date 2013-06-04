@@ -1,7 +1,7 @@
 /**
- * Description : Script for the applications index page.
+ * Description : Script for the applications home page.
  * Author : Rachna Khokhar
- * Date : 30-05-2013
+ * Date : 04-06-2013
  */
 
 define([ 'page_layout', 
