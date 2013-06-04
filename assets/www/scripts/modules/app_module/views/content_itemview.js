@@ -18,14 +18,18 @@ define([ 'underscore', 'marionette' ], function( _, Marionette ) {
 				};
 			},
 			initialize: function () {
-				_.bindAll (this, "template");
+				_.bindAll (this, "template", "busn_logic");
 			},
 			template: function() {
 				return opts.template;
 			},
 			model : function() {
-				console.log('options model=='+opts.model);
+				console.log("i m inside model");
 				return opts.model;
+			},
+			busn_logic : function() {
+				console.log("i m inside busn logic");
+				return opts.busn_logic;
 			}
 		}))(opts);
 	};

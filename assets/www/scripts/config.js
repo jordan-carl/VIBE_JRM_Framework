@@ -47,6 +47,9 @@ require.config({
 	    // Models
 	    indexpage_model : '../scripts/modules/app_module/models/indexpage_model',
 	    
+	    // Business Logic
+	    indexpage_logic : '../scripts/modules/app_module/busn_logic/indexpage_logic',
+	    
 	    // Layouts
 	    page_layout : '../scripts/modules/app_module/layouts/page_layout',
 	    	

@@ -10,14 +10,16 @@ define([ 'page_layout',
          'footer_itemview',
          'templates',
          'text_dictionary',
-         'indexpage_model'], 
+         'indexpage_model',
+         'indexpage_logic'], 
 		function( Page,
 				  Header,
 				  Content,
 				  Footer,
 				  Templates,
 				  Text_Dict,
-				  IndexPageModel) {
+				  IndexPageModel,
+				  BusnLogic) {
 	console.log("Success..Inside Index Page.");
 	var Page_Index = {};
 	Page_Index.page = (function(){
@@ -25,7 +27,7 @@ define([ 'page_layout',
 		return _pageLayout = Page.pageLayout({
 			name:_pageName,
 			headerView: 	Header.headerView({name:_pageName, title:Text_Dict.indexpage_header}),
-			contentView: 	Content.contentView({name:_pageName, template: Templates.content_index, model: new IndexPageModel() }),
+			contentView: 	Content.contentView({name:_pageName, template: Templates.content_index, model: new IndexPageModel(), busn_logic : BusnLogic }),
 			footerView: 	Footer.footerView({name:_pageName, title:Text_Dict.indexpage_footer})
 		});
 	})();
