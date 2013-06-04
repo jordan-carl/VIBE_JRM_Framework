@@ -22,6 +22,10 @@ define([ 'underscore', 'marionette' ], function( _, Marionette ) {
 			},
 			template: function() {
 				return opts.template;
+			},
+			model : function() {
+				console.log('options model=='+opts.model);
+				return opts.model;
 			}
 		}))(opts);
 	};

@@ -42,12 +42,17 @@ require.config({
 	    
 	    // Pages
 	    index_page : '../scripts/modules/app_module/pages/index_page',
+	    home_page : '../scripts/modules/app_module/pages/home_page',
+	    
+	    // Models
+	    indexpage_model : '../scripts/modules/app_module/models/indexpage_model',
 	    
 	    // Layouts
 	    page_layout : '../scripts/modules/app_module/layouts/page_layout',
 	    	
 	    // Dictionary
 	    text_dictionary : '../scripts/modules/app_module/dictionary/text_dictionary',
+	    event_dictionary : '../scripts/modules/app_module/dictionary/event_dictionary',
 	  },
 	  
 	 /*

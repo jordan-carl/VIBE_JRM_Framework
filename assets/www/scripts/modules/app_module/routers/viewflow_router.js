@@ -9,8 +9,9 @@ define([ 'marionette', 'viewflow_controller' ],
 	console.log("Success...Inside Router");
 			var App_Router = Marionette.AppRouter.extend({
 				appRoutes : {
-					'' : 'loadIndex',
-					'index' : 'loadIndex'
+					'' : 'loadIndexPage',
+					'index' : 'loadIndexPage',
+					'home' : 'loadHomePage',
 				}
 			});
 			return new App_Router({
