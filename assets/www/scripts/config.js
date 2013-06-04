@@ -36,7 +36,7 @@ require.config({
 	    templates : '../scripts/modules/app_module/template',
 	    
 	    // Views
-	    index_contentview : '../scripts/modules/app_module/views/index_contentview',
+	    content_itemview : '../scripts/modules/app_module/views/content_itemview',
 	    header_itemview : '../scripts/modules/app_module/views/header_itemview',
 	    footer_itemview : '../scripts/modules/app_module/views/footer_itemview',
 	    

@@ -3,7 +3,7 @@
  * Author : Rachna Khokhar
  * Date : 30-05-2013
  */
-define([ 'underscore', 'marionette', 'templates' ], function( _, Marionette, templates ) {
+define([ 'underscore', 'marionette' ], function( _, Marionette ) {
 	console.log("Success..Inside Content Index View.");
 	var Content = {};
 	Content.contentView = function (opts) {
@@ -21,7 +21,7 @@ define([ 'underscore', 'marionette', 'templates' ], function( _, Marionette, tem
 				_.bindAll (this, "template");
 			},
 			template: function() {
-				return templates.content_index;
+				return opts.template;
 			}
 		}))(opts);
 	};

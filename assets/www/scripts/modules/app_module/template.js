@@ -8,6 +8,7 @@ define(function(require) {
 	console.log("Inside...TemplateJS.");
 	return {
 		content_index : require('tpl!../scripts/modules/app_module/templates/content_index.tmpl'),
+		content_home : require('tpl!../scripts/modules/app_module/templates/content_home.tmpl'),
 		header : require('tpl!../scripts/modules/app_module/templates/header.tmpl'),
 		footer : require('tpl!../scripts/modules/app_module/templates/footer.tmpl'),
 	};

@@ -6,21 +6,23 @@
 
 define([ 'page_layout', 
          'header_itemview', 
-         'index_contentview', 
-         'footer_itemview' ], 
+         'content_itemview', 
+         'footer_itemview',
+         'templates'], 
 		function( Page,
 				  Header,
 				  Content,
-				  Footer) {
+				  Footer,
+				  Templates) {
 	console.log("Success..Inside Index Page.");
 	var Page_Index = {};
 	Page_Index.page = (function(){
-		var _pageName = 'index';
+		var _pageName = 'home';
 		return _pageLayout = Page.pageLayout({
 			name:_pageName,
-			headerView: 	Header.headerView({name:_pageName, title:'Welcome to the Index Page'}),
-			contentView: 	Content.contentView({name:_pageName}),
-			footerView: 	Footer.footerView({name:_pageName, title:'IndexPage Footer'})
+			headerView: 	Header.headerView({name:_pageName, title:'Home Page'}),
+			contentView: 	Content.contentView({name:_pageName, template: Templates.content_home}),
+			footerView: 	Footer.footerView({name:_pageName, title:'HomePage Footer'})
 		});
 	})();
 	
