@@ -8,21 +8,23 @@ define([ 'page_layout',
          'header_itemview', 
          'content_itemview', 
          'footer_itemview',
-         'templates'], 
+         'templates',
+         'text_dictionary'], 
 		function( Page,
 				  Header,
 				  Content,
 				  Footer,
-				  Templates) {
+				  Templates,
+				  Text_Dict) {
 	console.log("Success..Inside Index Page.");
 	var Page_Index = {};
 	Page_Index.page = (function(){
-		var _pageName = 'home';
+		var _pageName = Text_Dict.homepage_name;
 		return _pageLayout = Page.pageLayout({
 			name:_pageName,
-			headerView: 	Header.headerView({name:_pageName, title:'Home Page'}),
+			headerView: 	Header.headerView({name:_pageName, title:Text_Dict.homepage_header}),
 			contentView: 	Content.contentView({name:_pageName, template: Templates.content_home}),
-			footerView: 	Footer.footerView({name:_pageName, title:'HomePage Footer'})
+			footerView: 	Footer.footerView({name:_pageName, title:Text_Dict.homepage_footer})
 		});
 	})();
 	

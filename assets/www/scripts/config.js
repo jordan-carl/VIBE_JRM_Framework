@@ -44,7 +44,10 @@ require.config({
 	    index_page : '../scripts/modules/app_module/pages/index_page',
 	    
 	    // Layouts
-	    page_layout : '../scripts/modules/app_module/layouts/page_layout'
+	    page_layout : '../scripts/modules/app_module/layouts/page_layout',
+	    	
+	    // Dictionary
+	    text_dictionary : '../scripts/modules/app_module/dictionary/text_dictionary',
 	  },
 	  
 	 /*
