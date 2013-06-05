@@ -3,7 +3,7 @@
  * Author : Rachna Khokhar
  * Date : 30-05-2013
  */
-define([ 'underscore', 'marionette' ], function( _, Marionette ) {
+define([ 'underscore', 'marionette', 'event_dictionary' ], function( _, Marionette, Event_Dict ) {
 	console.log("Success..Inside Content Index View.");
 	var Content = {};
 	Content.contentView = function (opts) {
@@ -27,10 +27,22 @@ define([ 'underscore', 'marionette' ], function( _, Marionette ) {
 				console.log("i m inside model");
 				return opts.model;
 			},
+			events : {
+			      'click input[type="button"]' : 'onButtonClick'
+			    },
 			busn_logic : function() {
 				console.log("i m inside busn logic");
 				return opts.busn_logic;
-			}
+			},
+			    onButtonClick : function( obj ){
+			    	console.log("I am inside the button click...Hurray!!!");
+			    	var btn_id = $(obj.target).attr('id');
+			    	console.log("The button clicked id is==="+$(obj.target).attr('id'));
+			    	var btn_event = Event_Dict.getEventName(btn_id);
+			    	console.log("Success..btn_event..."+btn_event);
+			    	opts.busn_logic.onButtonClick({id:btn_id});
+			    	//opts.busn_logic.btnClick();
+			    }
 		}))(opts);
 	};
 	return Content;

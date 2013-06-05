@@ -9,14 +9,12 @@ define(['app', 'marionette', 'index_page'],
 	var ViewController = Marionette.Controller.extend({
 		loadIndexPage : function() {
 			console.log('Success...Inside Controllers loadIndex');
-            // App.pageRegion.show(IndexPage.page);
 			this.changePage( '#page_index' );
 		},
 		
 		loadHomePage : function() {
 			require(['home_page'], function(){
 				console.log('Success...Inside Controllers loadHome');
-	            // App.pageRegion.show(IndexPage.page);
 				this.changePage( '#page_home' );
             })
 		},
