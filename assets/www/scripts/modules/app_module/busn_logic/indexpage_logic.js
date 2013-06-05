@@ -4,15 +4,17 @@
  * Date : 04-06-2013
  */
 
-define(['event_dictionary'], function(Event_Dict) {
+define([ 'marionette', 'app' ], function( Marionette, App ) {
 	console.log("Success..Inside indexpage business logic.");
-	var Busn_Logic = {};
-	Busn_Logic.onButtonClick = function (opts) {
-		console.log("Success..Inside onButtonClick.");
-		var btn_id = opts.id;
-		console.log("Success..btn_id..."+btn_id);
-		var btn_event = Event_Dict.getEventName(btn_id);
-		console.log("Success..btn_event..."+btn_event);
-	};
-	return Busn_Logic;
+	var Event_Handler = Marionette.Controller.extend({
+		initialize : function () {
+			console.log("Success..Initialized business logic");
+			this.listenTo(App, "gotoHomepage:button:clicked", this.onGotoHomePageButtonClicked);
+		},
+		onGotoHomePageButtonClicked : function() {
+			console.log("Inside...On Home Page Button Clicked");
+			App.Router.navigate('home', {trigger:true});
+		}
+	});
+	return new Event_Handler();
 });

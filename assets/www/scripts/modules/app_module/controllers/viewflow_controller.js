@@ -13,10 +13,8 @@ define(['app', 'marionette', 'index_page'],
 		},
 		
 		loadHomePage : function() {
-			require(['home_page'], function(){
-				console.log('Success...Inside Controllers loadHome');
-				this.changePage( '#page_home' );
-            })
+			console.log('Success...Inside Controllers loadHome');
+			this.changePage( '#page_home' );
 		},
 	
 		changePage : function ( page, opts ) {

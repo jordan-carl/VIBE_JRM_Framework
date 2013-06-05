@@ -19,7 +19,7 @@ define([ 'page_layout',
 				  Templates,
 				  Text_Dict,
 				  IndexPageModel,
-				  BusnLogic) {
+				  IndexPage_BusnLogic) {
 	console.log("Success..Inside Index Page.");
 	var Page_Index = {};
 	Page_Index.page = (function(){
@@ -28,7 +28,7 @@ define([ 'page_layout',
 		var _pageLayout = Page.pageLayout({
 			name:_pageName,
 			headerView: 	Header.headerView({name:_pageName, title:Text_Dict.indexpage_header}),
-			contentView: 	Content.contentView({name:_pageName, template: Templates.content_index, model: new IndexPageModel(), busn_logic : BusnLogic }),
+			contentView: 	Content.contentView({name:_pageName, template: Templates.content_index, model: new IndexPageModel(), busn_logic: IndexPage_BusnLogic }),
 			footerView: 	Footer.footerView({name:_pageName, title:Text_Dict.indexpage_footer})
 		});
 		return _pageLayout;

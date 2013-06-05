@@ -17,4 +17,5 @@ define({
 	homepage_name : 'home',
 	homepage_header : 'Home Page',
 	homepage_footer : 'Home Page Footer',
+	lbl_enter_username : 'Username',
 });
