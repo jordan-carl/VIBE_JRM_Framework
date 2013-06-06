@@ -3,8 +3,8 @@
  * events. Author : Rachna Khokhar Date : 30-05-2013
  */
 
-define(['app', 'marionette', 'index_page'],
-    function (App, Marionette, IndexPage) {
+define(['app', 'marionette', 'index_page', 'home_page'],
+    function (App, Marionette, IndexPage, HomePage) {
 	console.log("Success...Inside Controller");
 	var ViewController = Marionette.Controller.extend({
 		loadIndexPage : function() {

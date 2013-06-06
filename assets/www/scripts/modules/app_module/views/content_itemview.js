@@ -32,6 +32,7 @@ define([ 'underscore', 'marionette', 'event_dictionary', 'app' ], function(_,
 				'click input[type="button"]' : 'onButtonClick'
 			},
 			onButtonClick : function(obj) {
+				obj.preventDefault();
 				console.log("I am inside the button click...Hurray!!!");
 				var btn_id = $(obj.target).attr('id');
 				console.log("The button clicked id is==="
