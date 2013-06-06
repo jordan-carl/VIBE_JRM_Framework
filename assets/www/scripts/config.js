@@ -28,6 +28,7 @@ require.config({
 	    marionette: '../scripts/ext_libs/backbone.marionette',
 	    tpl: '../scripts/ext_libs/tpl',
 	    jqm_config: '../scripts/jqm_config',
+	    load_css: '../scripts/utils/load_css',
 	    
 	    // Main Application Module Scripts
 	    app : '../scripts/modules/app_module/app',
@@ -93,18 +94,3 @@ require.config({
 	  
 	  waitSeconds:15
 });
-
-loadCss ('../www/assets/css/jquery.mobile-1.3.1.css');
-
-/*
-* loadCss
-*/
-function loadCss(url) {
-	console.log("Success...Loading CSS");
-    var link = document.createElement("link");
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = url;
-    document.getElementsByTagName("head")[0].appendChild(link);
-    console.log("Success...CSS Loaded");
-}

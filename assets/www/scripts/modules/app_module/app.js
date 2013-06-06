@@ -11,6 +11,7 @@ define(['marionette'],
 
         function isMobile() {
             var ua = (navigator.userAgent || navigator.vendor || window.opera, window, window.document);
+            console.log("Success...Useragent=="+ua);
             return (/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
         }
 
