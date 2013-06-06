@@ -24,11 +24,11 @@ define([ 'page_layout',
 	var Page_Index = {};
 	Page_Index.page = (function(){
 		var _pageName = Text_Dict.indexpage_name;
-		
+		var _pageModel = new IndexPageModel();
 		var _pageLayout = Page.pageLayout({
 			name:_pageName,
 			headerView: 	Header.headerView({name:_pageName, title:Text_Dict.indexpage_header}),
-			contentView: 	Content.contentView({name:_pageName, template: Templates.content_index, model: new IndexPageModel(), busn_logic: IndexPage_BusnLogic }),
+			contentView: 	Content.contentView({name:_pageName, template: Templates.content_index, model: _pageModel, busn_logic: IndexPage_BusnLogic.HandleEvents({model: _pageModel}) }),
 			footerView: 	Footer.footerView({name:_pageName, title:Text_Dict.indexpage_footer})
 		});
 		return _pageLayout;

@@ -7,8 +7,8 @@
 define(['backbone', 'text_dictionary'], function(Backbone, Text_Dict) {
 	var IndexPageModel = Backbone.Model.extend({
 		defaults:{
-			val_btn_gotohomepage : Text_Dict.btn_gotohomepage,
-			val_btn_gotologinpage : Text_Dict.btn_gotologinpage
+			val_btn_gotohomepage : Text_Dict.val_btn_gotohomepage,
+			val_btn_gotologinpage : Text_Dict.val_btn_gotologinpage
 		}
 	});
 	return IndexPageModel;

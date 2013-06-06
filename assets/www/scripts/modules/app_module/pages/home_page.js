@@ -24,10 +24,11 @@ define([ 'page_layout',
 	var Page_Index = {};
 	Page_Index.page = (function(){
 		var _pageName = Text_Dict.homepage_name;
+		var _pageModel = new HomePageModel();
 		return _pageLayout = Page.pageLayout({
 			name:_pageName,
 			headerView: 	Header.headerView({name:_pageName, title:Text_Dict.homepage_header}),
-			contentView: 	Content.contentView({name:_pageName, template: Templates.content_home, model: new HomePageModel(), busn_logic: HomePage_BusnLogic}),
+			contentView: 	Content.contentView({name:_pageName, template: Templates.content_home, model: _pageModel, busn_logic: HomePage_BusnLogic.HandleEvents({model: _pageModel}) }),
 			footerView: 	Footer.footerView({name:_pageName, title:Text_Dict.homepage_footer})
 		});
 	})();

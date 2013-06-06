@@ -6,7 +6,9 @@
 
 define([ 'marionette', 'app' ], function( Marionette, App ) {
 	console.log("Success..Inside homepage business logic.");
-	var Event_Handler = Marionette.Controller.extend({
+	var Event_Handler = {};
+	Event_Handler.HandleEvents = function (opts){
+		return new (Marionette.Controller.extend({
 		initialize : function () {
 			console.log("Success..Initialized business logic");
 			this.listenTo(App, "enterusername:text:keypress", this.onKeyPress);
@@ -14,6 +16,7 @@ define([ 'marionette', 'app' ], function( Marionette, App ) {
 		onKeyPress : function() {
 			console.log("Inside...On KeyPress");
 		}
-	});
-	return new Event_Handler();
+		}))(opts);
+	}
+	return Event_Handler;
 });

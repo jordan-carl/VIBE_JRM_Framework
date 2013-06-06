@@ -6,9 +6,11 @@
 
 define([], function() {
 	var EVENTS = [
-	//IndexPage Events
+	// Events
 	[ 'btn_gotohomepage', 'gotoHomepage:button:clicked' ],
-			[ 'btn_gotologinpage', 'gotoLoginpage:button:clicked' ] ];
+			[ 'btn_gotologinpage', 'gotoLoginpage:button:clicked' ],
+			[ 'btn_loginsubmit', 'loginsubmit:button:clicked' ],
+			];
 
 	/* array positions */
 	var EVENT_ID = 0;
