@@ -3,7 +3,6 @@
  * Author : Rachna Khokhar
  * Date : 04-06-2013
  */
-
 define([ 'marionette', 'app' ], function( Marionette, App ) {
 	console.log("Success..Inside indexpage business logic.");
 	var Event_Handler = {};

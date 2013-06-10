@@ -29,10 +29,10 @@ define([ 'underscore', 'marionette', 'event_dictionary', 'app' ], function(_,
 				return opts.model;
 			},
 			events : {
-				'click input[type="button"]' : 'onButtonClick'
+				'click input[type="button"]' : 'onButtonClick',
+				'keypress input[type="text"]' : 'onKeyPress'
 			},
 			onButtonClick : function(obj) {
-				obj.preventDefault();
 				console.log("I am inside the button click...Hurray!!!");
 				var btn_id = $(obj.target).attr('id');
 				console.log("The button clicked id is==="
@@ -40,8 +40,15 @@ define([ 'underscore', 'marionette', 'event_dictionary', 'app' ], function(_,
 				var btn_event = Event_Dict.getEventName(btn_id);
 				console.log("Success..btn_event..." + btn_event);
 				App.trigger(btn_event);
-				//opts.busn_logic.onButtonClick({id:btn_id});
-				//opts.busn_logic.btnClick();
+			},
+			onKeyPress : function(event_obj) {
+				console.log("I am inside the keypress...Hurray!!!");
+				var inputTypeText_id = $(event_obj.target).attr('id');
+				console.log("The input type text id is==="
+						+ $(event_obj.target).attr('id'));
+				var inputText_event = Event_Dict.getEventName(inputTypeText_id);
+				console.log("Success..inputText_event..." + inputText_event);
+				App.trigger(inputText_event, {model: this.model, event: event_obj});
 			}
 		}))(opts);
 	};

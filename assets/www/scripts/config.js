@@ -59,6 +59,10 @@ require.config({
 	    // Dictionary
 	    text_dictionary : '../scripts/modules/app_module/dictionary/text_dictionary',
 	    event_dictionary : '../scripts/modules/app_module/dictionary/event_dictionary',
+	    
+	    // Networking Code
+	    ajaxRequestHandler : '../scripts/net/ajaxRequestHandler',
+	    ajaxResponseHandler : '../scripts/modules/app_module/net/ajaxResponseHandler',
 	  },
 	  
 	 /*

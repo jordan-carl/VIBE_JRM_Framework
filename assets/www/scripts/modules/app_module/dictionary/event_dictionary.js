@@ -7,10 +7,12 @@
 define([], function() {
 	var EVENTS = [
 	// Events
-	[ 'btn_gotohomepage', 'gotoHomepage:button:clicked' ],
-			[ 'btn_gotologinpage', 'gotoLoginpage:button:clicked' ],
-			[ 'btn_loginsubmit', 'loginsubmit:button:clicked' ],
-			];
+		[ 'btn_gotohomepage', 'gotoHomepage:button:clicked' ],
+		[ 'btn_gotologinpage', 'gotoLoginpage:button:clicked' ],
+		[ 'btn_loginsubmit', 'loginsubmit:button:clicked' ],
+		[ 'text_enter_username', 'username:inputtext:keypress' ],
+		[ 'text_enter_password', 'password:inputtext:keypress' ],
+	];
 
 	/* array positions */
 	var EVENT_ID = 0;
