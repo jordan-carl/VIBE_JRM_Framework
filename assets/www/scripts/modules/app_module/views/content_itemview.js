@@ -31,7 +31,9 @@ define([ 'underscore', 'marionette', 'event_dictionary', 'app' ], function(_,
 			events : {
 				'click input[type="button"]' : 'onButtonClick',
 				'keypress input[type="text"]' : 'onKeyPress',
-				'keypress input[type="password"]' : 'onKeyPress'
+				'keypress input[type="password"]' : 'onKeyPress',
+				'blur input[type="text"]' : 'onKeyPress',
+				'blur input[type="password"]' : 'onKeyPress'
 			},
 			onButtonClick : function(obj) {
 				console.log("I am inside the button click...Hurray!!!");

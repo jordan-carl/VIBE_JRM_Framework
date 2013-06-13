@@ -22,13 +22,10 @@ define([ 'marionette', 'app', 'event_dictionary' ], function( Marionette, App, E
 			var evt = options.event;
 			console.log("KeyCode.."+evt.keyCode);
 			console.log("Event type.."+evt.type);
-			if( evt.keyCode === 13 ){
+			if( evt.keyCode === 13 || evt.type === 'focusout' ){
 				console.log("Inside...On Enter KeyPress........."+$(evt.target).val());
 				username = $(evt.target).val();
 				//options.model.set({ username_value : $(evt.target).val() })
-				if( evt.type !== 'focusout' ){
-					$(evt.target).focusout();
-				}
 				evt.preventDefault();
 			}
 		},
@@ -38,12 +35,9 @@ define([ 'marionette', 'app', 'event_dictionary' ], function( Marionette, App, E
 			var evt = options.event;
 			console.log("KeyCode.."+evt.keyCode);
 			console.log("Event type.."+evt.type);
-			if( evt.keyCode === 13 ){
+			if( evt.keyCode === 13 || evt.type === 'focusout' ){
 				console.log("Inside...On Enter KeyPress........."+$(evt.target).val());
 				password = $(evt.target).val();
-				if( evt.type !== 'focusout' ){
-					$(evt.target).focusout();
-				}
 				evt.preventDefault();
 			}
 		},
