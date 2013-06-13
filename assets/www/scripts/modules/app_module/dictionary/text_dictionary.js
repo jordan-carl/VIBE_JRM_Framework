@@ -1,5 +1,5 @@
 /**
- * Description : Script for holding application level texts
+ * Description : Script for holding application level texts which will be displayed on the html page.
  * Author : Rachna Khokhar
  * Date : 04-06-2013
  */

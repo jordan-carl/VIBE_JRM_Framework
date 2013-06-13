@@ -3,12 +3,13 @@
  * events. Author : Rachna Khokhar Date : 30-05-2013
  */
 
-define(['app', 'marionette', 'index_page', 'home_page'],
-    function (App, Marionette, IndexPage, HomePage) {
+define(['app', 'marionette', 'remote_controller', 'index_page', 'home_page'],
+    function (App, Marionette, RemoteController, IndexPage, HomePage) {
 	console.log("Success...Inside Controller");
 	var ViewController = Marionette.Controller.extend({
 		loadIndexPage : function() {
 			console.log('Success...Inside Controllers loadIndex');
+			RemoteController.HandleEvents();
 			this.changePage( '#page_index' );
 		},
 		

@@ -29,12 +29,17 @@ require.config({
 	    tpl: '../scripts/ext_libs/tpl',
 	    jqm_config: '../scripts/jqm_config',
 	    load_css: '../scripts/utils/load_css',
+	    interfaceJS : '../scripts/utils/interfaceJS',
+	    jshashtable : '../scripts/utils/jshashtable',
 	    
 	    // Main Application Module Scripts
 	    app : '../scripts/modules/app_module/app',
 	    viewflow_router : '../scripts/modules/app_module/routers/viewflow_router',
-	    viewflow_controller : '../scripts/modules/app_module/controllers/viewflow_controller',
 	    templates : '../scripts/modules/app_module/template',
+	    
+	    // Controllers
+	    viewflow_controller : '../scripts/modules/app_module/controllers/viewflow_controller',
+	    remote_controller : '../scripts/modules/app_module/controllers/remote_controller',
 	    
 	    // Views
 	    content_itemview : '../scripts/modules/app_module/views/content_itemview',
@@ -59,10 +64,15 @@ require.config({
 	    // Dictionary
 	    text_dictionary : '../scripts/modules/app_module/dictionary/text_dictionary',
 	    event_dictionary : '../scripts/modules/app_module/dictionary/event_dictionary',
+	    app_dictionary : '../scripts/modules/app_module/dictionary/app_dictionary',
 	    
 	    // Networking Code
 	    ajaxRequestHandler : '../scripts/net/ajaxRequestHandler',
 	    ajaxResponseHandler : '../scripts/modules/app_module/net/ajaxResponseHandler',
+	    INetworkListener : '../scripts/net/INetworkListener',
+	    
+	    // Constants
+	    constants : '../scripts/modules/app_module/constants/constants',
 	  },
 	  
 	 /*

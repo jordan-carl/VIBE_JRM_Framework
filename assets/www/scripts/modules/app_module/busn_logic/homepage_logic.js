@@ -4,7 +4,7 @@
  * Date : 05-06-2013
  */
 
-define([ 'marionette', 'app' ], function( Marionette, App ) {
+define([ 'marionette', 'app', 'event_dictionary' ], function( Marionette, App, Event_Dict ) {
 	console.log("Success..Inside homepage business logic.");
 	var Event_Handler = {};
 	var username, password;
@@ -49,7 +49,13 @@ define([ 'marionette', 'app' ], function( Marionette, App ) {
 		},
 		onLoginSubmitButtonClick : function(options){
 			console.log("Inside...On Login Button Click");
-			
+			username = $(text_enter_username).val();
+			password = $(text_enter_password).val();
+			console.log('Username='+username+'  Password='+password);
+			var _event = Event_Dict.getEventName('login_validate');
+			console.log("Success..event..." + _event);
+			var loginData = "Username=indus$Password=indus$Longitude=77.0838169$Latitude=28.4965582$TimeStamp=2013-03-14 14:30:28.608";
+			App.trigger(_event, {requestdata : loginData});
 		}
 		}))(opts);
 	}

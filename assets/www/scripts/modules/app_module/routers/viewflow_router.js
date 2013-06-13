@@ -4,8 +4,8 @@
  * Date : 30-05-2013
  */
 
-define([ 'marionette', 'viewflow_controller' ],
-		function( Marionette, ViewController) {
+define([ 'marionette', 'viewflow_controller', 'remote_controller' ],
+		function( Marionette, ViewController, RemoteController ) {
 	console.log("Success...Inside Router");
 			var App_Router = Marionette.AppRouter.extend({
 				appRoutes : {
